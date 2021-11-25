@@ -18,9 +18,9 @@
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link" href="pages-profile.html">
+                    <router-link class="sidebar-link" to="/profile">
                         <i class="align-middle" data-feather="user"></i> <span class="align-middle">Profile</span>
-                    </a>
+                    </router-link>
                 </li>
 
                 <li class="sidebar-item">

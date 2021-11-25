@@ -17,12 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/template', function () {
+Route::get('/{vue_capture:[/\w.-]*}', function () { return view('template'); });
+
+
+Route::get('/admin', function () {
     return view('template');
 })->middleware(['auth'])->name('template');
 
-Route::get('/admin', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+//
+//Route::get('/admin', function () {
+//    return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
+
 
 require __DIR__.'/auth.php';
