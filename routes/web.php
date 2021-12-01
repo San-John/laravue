@@ -17,7 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/{vue_capture:[/\w.-]*}', function () { return view('template'); });
+Route::get('{any}', function () {
+    return view('template');
+})->where('any', '.*')->middleware('auth')->name('admin');
 
 
 Route::get('/admin', function () {
@@ -30,4 +32,4 @@ Route::get('/admin', function () {
 //})->middleware(['auth'])->name('dashboard');
 
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

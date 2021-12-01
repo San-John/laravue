@@ -12,11 +12,16 @@ const routes = [
     },
 
     {
-        path: '/template',
+        path: '/admin',
         name: 'dashboard',
         component: dashboard,
     },
 
+    {
+        path: '/',
+        name: 'index',
+        component: dashboard,
+    },
     {
         path: '/dashboard',
         name: 'index',
@@ -27,5 +32,7 @@ const routes = [
 
 export default createRouter({
     history: createWebHistory(),
-    routes,
+    routes : routes,
+    linkActiveClass: 'active'
+
 })
